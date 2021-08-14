@@ -1,0 +1,2 @@
+# ts-mapped-event-emitter
+ 
