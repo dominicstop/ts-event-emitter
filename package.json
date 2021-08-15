@@ -1,5 +1,5 @@
 {
-  "name": "ts-mapped-event-emitter",
+  "name": "@dominicstop/ts-event-emitter",
   "version": "0.0.0",
   "description": "Yet another event emitter written in typescript.",
   "main": "./lib/commonjs/index.js",
@@ -15,9 +15,10 @@
     "build:ts": "rm -rf lib/typescript && tsc --outDir lib/typescript --declaration --emitDeclarationOnly"
   },
   "keywords": [
-    "typescript",
+    "emitter",
     "event-emitter",
-    "emitter"
+    "typescript",
+    "typescript-event-emitter"
   ],
   "repository": "https://github.com/dominicstop/ts-mapped-event-emitter",
   "author": "Dominic Go <dominicstop@gmail.com> (https://github.com/dominicstop)",
