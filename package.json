@@ -20,13 +20,13 @@
     "typescript",
     "typescript-event-emitter"
   ],
-  "repository": "https://github.com/dominicstop/ts-mapped-event-emitter",
+  "repository": "https://github.com/dominicstop/ts-event-emitter",
   "author": "Dominic Go <dominicstop@gmail.com> (https://github.com/dominicstop)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dominicstop/ts-mapped-event-emitter/issues"
+    "url": "https://github.com/dominicstop/ts-event-emitter/issues"
   },
-  "homepage": "https://github.com/dominicstop/ts-mapped-event-emitter#readme",
+  "homepage": "https://github.com/dominicstop/ts-event-emitter#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
