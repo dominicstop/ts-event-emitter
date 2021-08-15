@@ -4,7 +4,7 @@
   "description": "Yet another event emitter written in typescript.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
-  "types": "/lib/typescript/index.d.ts",
+  "types": "/lib/module/index.d.ts",
   "source": "src/index",
   "files": [
     "src",
@@ -13,11 +13,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "release": "release-it --version-only",
-    "build": "npm run build:esm && npm run build:cjs && npm run build:ts",
-    "build:esm": "rm -rf lib/module && tsc --declaration false --module es6 --outDir lib/module",
-    "build:cjs": "rm -rf lib/commonjs && tsc --declaration false --module commonjs --outDir lib/commonjs",
-    "build:ts": "rm -rf lib/typescript && tsc --outDir lib/typescript --declaration --emitDeclarationOnly"
+    "release": "release-it --only-version",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "rm -rf lib/module && tsc --module es2015 --target es5 --outDir lib/module",
+    "build:cjs": "rm -rf lib/commonjs && tsc --module commonjs --target es5 --outDir lib/commonjs"
   },
   "keywords": [
     "emitter",
