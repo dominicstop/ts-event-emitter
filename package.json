@@ -7,10 +7,11 @@
   "types": "./lib/typescript/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "npm run build:esm && npm run build:cjs && npm run build:ts",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "build": "npm run build:esm && npm run build:cjs && npm run build:ts",
     "build:esm": "rm -rf lib/module && tsc --declaration false --module es6 --outDir lib/module",
     "build:cjs": "rm -rf lib/commonjs && tsc --declaration false --module commonjs --outDir lib/commonjs",
-    "build:ts" : "rm -rf lib/typescript && tsc --outDir lib/typescript --declaration --emitDeclarationOnly"
+    "build:ts": "rm -rf lib/typescript && tsc --outDir lib/typescript --declaration --emitDeclarationOnly"
   },
   "keywords": [
     "typescript",
@@ -28,6 +29,9 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
     "typescript": "^4.3.5"
   }
 }
