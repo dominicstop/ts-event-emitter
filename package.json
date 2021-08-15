@@ -8,6 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "release": "release-it",
     "build": "npm run build:esm && npm run build:cjs && npm run build:ts",
     "build:esm": "rm -rf lib/module && tsc --declaration false --module es6 --outDir lib/module",
     "build:cjs": "rm -rf lib/commonjs && tsc --declaration false --module commonjs --outDir lib/commonjs",
@@ -32,6 +33,19 @@
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
     "eslint": "^7.32.0",
+    "release-it": "*",
     "typescript": "^4.3.5"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "⚙️ chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    }
   }
 }
