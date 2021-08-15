@@ -2,9 +2,9 @@
   "name": "@dominicstop/ts-event-emitter",
   "version": "1.0.1",
   "description": "Yet another event emitter written in typescript.",
-  "main": "./lib/commonjs/index.js",
-  "module": "./lib/module/index.js",
-  "types": "./lib/typescript/index.d.ts",
+  "main": "/lib/commonjs/index.js",
+  "module": "/lib/module/index.js",
+  "types": "/lib/typescript/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
