@@ -1,1 +1,1 @@
-export * from './TSEventEmitter';
+export { EventListener, TSEventEmitter } from './TSEventEmitter';
