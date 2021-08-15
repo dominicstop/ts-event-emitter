@@ -1,15 +1,32 @@
 {
   "name": "ts-mapped-event-emitter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Yet another event emitter written in typescript.",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
+  "types": "./lib/typescript/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "tsc"
+    "build" : "npm run build:esm && npm run build:cjs && npm run build:ts",
+    "build:esm": "rm -rf lib/module && tsc --declaration false --module es6 --outDir lib/module",
+    "build:cjs": "rm -rf lib/commonjs && tsc --declaration false --module commonjs --outDir lib/commonjs",
+    "build:ts" : "rm -rf lib/typescript && tsc --outDir lib/typescript --declaration --emitDeclarationOnly"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "typescript",
+    "event-emitter",
+    "emitter"
+  ],
+  "repository": "https://github.com/dominicstop/ts-mapped-event-emitter",
+  "author": "Dominic Go <dominicstop@gmail.com> (https://github.com/dominicstop)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dominicstop/ts-mapped-event-emitter/issues"
+  },
+  "homepage": "https://github.com/dominicstop/ts-mapped-event-emitter#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "typescript": "^4.3.5"
   }
