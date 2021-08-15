@@ -1,6 +1,6 @@
 {
   "name": "ts-mapped-event-emitter",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Yet another event emitter written in typescript.",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
