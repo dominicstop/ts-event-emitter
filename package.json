@@ -4,11 +4,11 @@
   "description": "Yet another event emitter written in typescript.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
-  "types": "/lib/module/index",
+  "types": "lib/module/index",
   "source": "src/index",
   "files": [
-    "src",
-    "lib"
+    "lib/**/*",
+    "src/**/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
