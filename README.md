@@ -62,7 +62,7 @@ export const emitter: TSEventEmitter<EventKeys, {
   //   and you can't pass a data argument to `emit` (see step 4.2.)
   Bar: null, 
 
-  // 2.3.or alt., you can make the event param "optional".
+  // 2.3. or alt., you can make the event param "optional".
   Baz: null | { age: number }
 }> = new TSEventEmitter();
 
@@ -83,7 +83,7 @@ emitter.emit(Events.Foo, { name: 'd'});
 emitter.emit('Baz', { age: 1 });
  
 // 4.1. Note: You can't pass a data argument with the 'Bar' event
-// i.e. because of step 2.2., event is defined as `null`.
+// because in step 2.2., the event object is defined as `null`.
 emitter.emit('Bar');
  
 // 4.2. We must explicitly pass a null/undefined value for the data
