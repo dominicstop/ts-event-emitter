@@ -109,6 +109,12 @@ export class TSEventEmitter<
     };
 
     this.addListener(eventKey, tempListener);
+
+    return {
+      unsubscribe: () => {
+        this.removeListener(eventKey, tempListener);
+      }
+    };
   };
 
   removeAllListeners(){
